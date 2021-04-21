@@ -1,11 +1,10 @@
 import React from 'react'
+import Homepage from './Screens/Homepage'
 const App = ()=>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <h3>Proshop</h3>
-      </header>
-    </div>
+    <>
+    <Homepage />
+    </>
   );
 }
 
