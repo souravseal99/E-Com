@@ -6,14 +6,14 @@ import Header from '../Components/Header'
 const Homepage = () => {
     return (
         <div>
-            <main>
-                <div>
+            <main className = "app__main">
+                <div className = "app__header">
                     <Header />
                 </div>
-                <div>
+                <div className="app__body">
                     <Body />
                 </div>
-                <div>
+                <div className = "app__footer">
                     <Footer />
                 </div>
             </main>

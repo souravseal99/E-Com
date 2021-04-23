@@ -3,7 +3,7 @@ import Homepage from './Screens/Homepage'
 const App = ()=>{
   return (
     <>
-    <Homepage />
+      <Homepage />
     </>
   );
 }
