@@ -1,6 +1,6 @@
 import React from 'react'
-import { Col, Container, Row  } from 'react-bootstrap'
-import products from '../products'
+import { Container, Row  } from 'react-bootstrap'
+import { productList } from '../productList'
 import Products from './Products'
 const Body = () => {
     return (
@@ -8,7 +8,7 @@ const Body = () => {
             <Container>
                 <Row className = "body__cards">
                 {
-                    products.map( product => (
+                    productList.map( product => (
                         <Products key = {product.id} item = {product} />
                     ))
                 }

@@ -1,4 +1,4 @@
-const products = [
+export const productList = [
     {
         name: "ASUS VivoBook 14 (2020) Intel Quad Core Pentium Silver N5030, 14-inch FHD Thin and Light Laptop (4GB RAM/1TB HDD/Windows 10/Integrated Graphics/Transparent Silver/1.5 Kg), X415MA-EK101T",
         id:0,
@@ -21,7 +21,7 @@ const products = [
         name: "ASUS ROG G531GT-BI7N6 15.6-inch FHD Gaming Laptop Computer, Intel Hexa-Core i7-9750H Up to 4.5GHz, 8GB DDR4, 512GB SSD, NVIDIA GeForce GTX 1650, 802.11ac WiFi, HDMI, USB 3.0, Windows 10",
         id:2,
         price:"₹1,21,860",
-        rating: 4.5,
+        rating: 2.5,
         numReview: 242,
         image: "https://m.media-amazon.com/images/I/71rsCcI9eKL._AC_UY327_FMwebp_QL65_.jpg",
         brand: "ASUS"
@@ -36,5 +36,3 @@ const products = [
         brand: "ASUS"
     }
 ]
-
-export default products;
