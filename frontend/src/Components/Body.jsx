@@ -1,18 +1,19 @@
 import React from 'react'
-import { Container, Row  } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { productList } from '../productList'
 import Products from './Products'
+
 const Body = () => {
     return (
-        <div>
+        <div style={{ height: "80vh" }}>
             <Container>
-                <Row className = "body__cards">
-                {
-                    productList.map( product => (
-                        <Products key = {product.id} item = {product} />
-                    ))
-                }
-                </Row>
+                <div className="body__cards">
+                    {
+                        productList.map(product => (
+                            <Products key={product._id} item={product} />
+                        ))
+                    }
+                </div>
             </Container>
         </div>
     )
