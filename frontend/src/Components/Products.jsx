@@ -8,7 +8,7 @@ const Products = ({ item }) => {
         <div>
             <Container>
                 <Card style={{ width: '18rem' }}>
-                    <Card.Img style={{ padding: "1.4em" }} variant="top" src={item.image} alt={item.name} />
+                    <Card.Img className="card__image" variant="top" src={item.image} alt={item.name} />
                     <LinkContainer to={`/product/${item._id}`}>
                         <Card.Body>
                             <Card.Title>{item.brand}</Card.Title>
