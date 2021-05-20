@@ -1,23 +1,26 @@
 import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Body from '../Components/Body'
 import Footer from '../Components/Footer'
 import Header from '../Components/Header'
+import ProductDetail from './ProductDetail'
 
 const Homepage = () => {
     return (
-        <div>
-            <main className = "app__main">
-                <div className = "app__header">
+        <Router>
+            <main className="app__main">
+                <div className="app__header">
                     <Header />
                 </div>
                 <div className="app__body">
-                    <Body />
+                    <Route path="/" component={Body} exact />
+                    <Route path="/product/:id" component={ProductDetail} />
                 </div>
-                <div className = "app__footer">
+                <div className="app__footer">
                     <Footer />
                 </div>
             </main>
-        </div>
+        </Router>
     )
 }
 
