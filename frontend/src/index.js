@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './CSS/index.css';
-import './CSS/bootstrap.min.css';
+import './CSS/Yeti_bootstrap.min.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
