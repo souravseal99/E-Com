@@ -31,3 +31,9 @@ body{
   justify-content: space-between;
   text-align: center;
 }
+
+.card__image{
+  object-fit: contain;
+  height:15em;
+  padding: 1.3em;
+}
