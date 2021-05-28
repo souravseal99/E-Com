@@ -6,8 +6,8 @@ import { LinkContainer } from 'react-router-bootstrap'
 const Products = ({ item }) => {
     return (
         <div>
-            <Container>
-                <Card style={{ width: '18rem' }}>
+            <Container style={{ margin: 'auto 0px' }}>
+                <Card style={{ width: '18rem', marginBottom: '2em' }}>
                     <Card.Img className="card__image" variant="top" src={item.image} alt={item.name} />
                     <LinkContainer to={`/product/${item._id}`}>
                         <Card.Body>
