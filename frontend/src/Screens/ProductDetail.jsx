@@ -1,6 +1,6 @@
 import React from 'react'
 import { productList } from '../productList'
-import { Image, Row, Col, Container } from 'react-bootstrap'
+import { Image, Row, Col, Container, Button } from 'react-bootstrap'
 import Rating from '../Components/Rating'
 import { Link } from 'react-router-dom'
 
@@ -8,7 +8,7 @@ const ProductDetail = ({ match }) => {
   const product = productList.find(p => parseInt(p._id) === parseInt(match.params.id))
   return (
     <div>
-      <Container style={{ height: "80vh" }} className="pt-2">
+      <Container fluid="md" style={{ height: "80vh" }} className="pt-2">
         <Link to='/' className=' offset-md-11 px-4 py-2 btn btn-outline-dark' variant="outline-dark">Back</Link>
         <Row>
           <Col className="col-lg-6 col-md-12">
@@ -32,6 +32,16 @@ const ProductDetail = ({ match }) => {
             <Row className="mt-1">
               <Rating value={product.rating} reviewCount={product.numReview} />
             </Row>
+
+            <Row className="mt-5">
+
+              <Col>
+                <Button variant="outline-danger" size="lg" block disabled={product.count === 0} >
+                  <strong>Add to Cart</strong>
+                </Button>
+              </Col>
+            </Row>
+
             <Row className="mt-5">
               <div className=" pr-4 ">
                 <h4>Details: <br /></h4>
