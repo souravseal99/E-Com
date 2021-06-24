@@ -1,4 +1,4 @@
-export const productList = [
+const productList = [
     {
         _id: 0,
         brand: "ASUS",
@@ -48,3 +48,5 @@ export const productList = [
         image: "https://m.media-amazon.com/images/I/61HWikiDHFL._AC_UY327_FMwebp_QL65_.jpg",
     }
 ]
+
+module.exports = productList;
