@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
-import { Image, Row, Col, Container } from 'react-bootstrap'
-=======
-import React from 'react'
-import { productList } from '../productList'
 import { Image, Row, Col, Container, Button } from 'react-bootstrap'
->>>>>>> 041145dcb0f04b4ca31d67c17851dc367bbea951
 import Rating from '../Components/Rating'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
