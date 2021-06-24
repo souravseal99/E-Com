@@ -43,7 +43,7 @@ const productList = [
         price: "₹58,990",
         rating: 4,
         numReview: 279,
-        count: 6,
+        count: 0,
         details: "15.6-inch FHD Laptop GTX 1050 4GB Graphics (Core i5-8300H 8th Gen/8GB RAM/1TB SSHD/Windows 10/Gun Metal/2.30 Kg), FX504GD-E4021T",
         image: "https://m.media-amazon.com/images/I/61HWikiDHFL._AC_UY327_FMwebp_QL65_.jpg",
     }
