@@ -1,0 +1,28 @@
+{
+  "name": "e-com",
+  "version": "1.0.0",
+  "description": "InTech",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souravseal99/E-Com.git"
+  },
+  "author": "Sourav Seal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/souravseal99/E-Com/issues"
+  },
+  "homepage": "https://github.com/souravseal99/E-Com#readme",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
