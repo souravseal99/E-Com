@@ -1,5 +1,6 @@
 {
   "name": "e-com",
+  "type": "module",
   "version": "1.0.0",
   "description": "InTech",
   "main": "server.js",
@@ -23,6 +24,10 @@
     "concurrently": "^6.2.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "mongoose": "^5.12.14",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "colours": "^0.6.0-2"
   }
 }

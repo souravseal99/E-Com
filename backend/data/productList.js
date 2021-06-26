@@ -49,4 +49,4 @@ const productList = [
     }
 ]
 
-module.exports = productList;
+export default productList;
