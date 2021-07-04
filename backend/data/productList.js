@@ -1,6 +1,5 @@
 const productList = [
     {
-        _id: 0,
         brand: "ASUS",
         name: "ASUS VivoBook 14 (2020) ",
         category: "Ultrabook",
@@ -12,7 +11,6 @@ const productList = [
         image: "https://m.media-amazon.com/images/I/71WuDXpTAlL._AC_UY327_FMwebp_QL65_.jpg",
     },
     {
-        _id: 1,
         brand: "LENOVO",
         name: "Lenovo Legion Y545",
         category: "Gaming",
@@ -24,7 +22,6 @@ const productList = [
         image: "https://m.media-amazon.com/images/I/71jT3RB8DuL._AC_UY327_FMwebp_QL65_.jpg",
     },
     {
-        _id: 2,
         brand: "ASUS",
         name: "ASUS ROG G531GT-BI7N6",
         category: "Gaming",
@@ -36,7 +33,6 @@ const productList = [
         image: "https://m.media-amazon.com/images/I/71rsCcI9eKL._AC_UY327_FMwebp_QL65_.jpg",
     },
     {
-        _id: 3,
         brand: "ASUS",
         name: "ASUS TUF Gaming FX504",
         category: "Gaming",
