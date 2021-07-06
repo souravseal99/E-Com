@@ -8,7 +8,9 @@
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "insert-data": "node backend/dataSeeder",
+    "destroy-data": "node backend/dataSeeder -d"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   },
   "homepage": "https://github.com/souravseal99/E-Com#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "concurrently": "^6.2.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
