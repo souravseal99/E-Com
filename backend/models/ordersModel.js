@@ -53,7 +53,7 @@ const orderSchema = mongoose.Schema({
         email_address: String,
     }
 }, {
-    timestamp: true
+    timestamps: true
 })
 
 const order = mongoose.model('order', orderSchema)

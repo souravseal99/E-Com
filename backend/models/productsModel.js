@@ -21,7 +21,7 @@ const reviewSchema = mongoose.Schema(
 )
 
 const productSchema = mongoose.Schema({
-    user: {
+    createdBy: {
         type: mongoose.Schema.Types.ObjectID,
         ref: 'user',
         require: true
@@ -58,7 +58,7 @@ const productSchema = mongoose.Schema({
         default: 0
     },
     price: {
-        type: Number,
+        type: String,
         require: true,
         default: 0
     },
@@ -68,7 +68,7 @@ const productSchema = mongoose.Schema({
         default: 0
     },
 }, {
-    timestamp: true
+    timestamps: true
 })
 
 const products = mongoose.model('products', productSchema)

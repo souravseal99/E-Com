@@ -20,10 +20,10 @@ const import_data = async () => {
         const userData = await user.insertMany(userList);
         const admin = userData[0]._id
         const pdtData = productList.map(pdt => {
-            return { ...pdt, admin }
+            return { ...pdt, createdBy: admin }
         })
-        // await product.insertMany(pdtData)
-        // await orders.insertMany()
+        await product.insertMany(pdtData)
+        await orders.insertMany()
         console.log("Data added".green.inverse)
         process.exit()
     } catch (error) {
