@@ -22,8 +22,8 @@ const import_data = async () => {
         const pdtData = productList.map(pdt => {
             return { ...pdt, admin }
         })
-        await product.insertMany(pdtData)
-        await orders.insertMany()
+        // await product.insertMany(pdtData)
+        // await orders.insertMany()
         console.log("Data added".green.inverse)
         process.exit()
     } catch (error) {
@@ -46,7 +46,7 @@ const delete_data = async () => {
 }
 
 
-if (process.arg[2] === "-d")
+if (process.argv[2] === "-d")
     delete_data();
 else
     import_data();
