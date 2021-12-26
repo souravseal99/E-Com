@@ -46,7 +46,7 @@ const orderSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    psymentDetails: {
+    paymentDetails: {
         id: String,
         status: String,
         update_time: String,
