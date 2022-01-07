@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react'
+import { useDispatch } from "react-redux";
 import { Container } from 'react-bootstrap'
 import Products from './Products'
-import axios from 'axios'
+// import axios from 'axios'
 
 
 const Body = () => {
 
-    const [productList, setProductList] = useState([])
-
+    const dispatch = useDispatch();
     useEffect(() => {
-        const getList = async () => {
-            const { data } = await axios.get('/api/products')
-            setProductList(data)
-        }
-        getList()
-    }, [])
+        dispatch()
+    }, [dispatch])
+
+    const productList = [];
 
     return (
         <div style={{ height: "80vh" }}>
