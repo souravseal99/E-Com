@@ -5,11 +5,10 @@ import {
 } from '../constants/productListConst'
 import axios from 'axios'
 
-export const productListAction = () => async (dispatch) => {
+const productListAction = () => async (dispatch) => {
     try {
         dispatch({
             type: PRODUCT_LIST_LOADING,
-            payload: []
         })
         const { data } = await axios.get('/api/products')
         dispatch({
@@ -19,7 +18,9 @@ export const productListAction = () => async (dispatch) => {
     } catch (error) {
         dispatch({
             type: PRODUCT_LIST_FAILED,
-            error: error.response && error.response.data.message ? error.response.data.message : error.response
+            payload: error.response && error.response.data.message ? error.response.data.message : error.response
         })
     }
 }
+
+export default productListAction
