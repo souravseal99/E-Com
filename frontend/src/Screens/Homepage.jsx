@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Body from '../Components/Body'
 import Footer from '../Components/Footer'
 import Header from '../Components/Header'
@@ -13,8 +13,10 @@ const Homepage = () => {
                     <Header />
                 </div>
                 <div className="app__body">
-                    <Route path="/" component={Body} exact />
-                    <Route path="/product/:id" component={ProductDetail} />
+                    <Routes> {/*have to specify routes in New version */}
+                        <Route path="/" element={<Body />} exact />
+                        <Route path="/product/:id" element={<ProductDetail />} />
+                    </Routes>
                 </div>
                 <div className="app__footer">
                     <Footer />

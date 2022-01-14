@@ -18,26 +18,30 @@ const Body = () => {
     const { loading, products, error } = productList
 
     return (
-        <div style={{ height: "80vh" }}>
+        <div style={{
+            minHeight: "80vh"
+        }}>
             {
                 loading ? (
-                    <h1>Loading...</h1>
-                ) : error ? (
-                    <h1>{error}</h1>
+                    <h1> Loading...</h1 >
                 ) : (
-                    <Container>
-                        <div className="body__cards">
-                            {
-                                products.map(product => (
-                                    <ProductView key={product._id} item={product} />
-                                ))
-                            }
-                        </div>
-                    </Container>
+                    error ? (
+                        <h1>{error}</h1>
+                    ) : (
+                        <Container>
+                            <div className="body__cards">
+                                {
+                                    products.map(product => (
+                                        <ProductView key={product._id} item={product} />
+                                    ))
+                                }
+                            </div>
+                        </Container>
+                    )
                 )
             }
 
-        </div>
+        </div >
     )
 }
 
