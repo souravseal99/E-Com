@@ -1,20 +1,24 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Image, Row, Col, Container, Button } from 'react-bootstrap'
 import Rating from '../Components/Rating'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+import { productDetailsActions } from "../actions/productDetailsActions";
+
 
 const ProductDetail = ({ match }) => {
 
-  const [product, setProduct] = useState({})
-  useEffect(() => {
-    const getProduct = async () => {
-      const { data } = await axios.get(`/api/products/${match.params.id}`)
-      setProduct(data)
-    }
-    getProduct()
-  }, [match.params.id])
+  const dispatch = useDispatch()
 
+  useEffect(() => {
+    dispatch(productDetailsActions(match.params.id));
+  }, [dispatch])
+
+  const productDetails = useSelector(state => state.productDetails)
+
+  const { loading, productDetail, error } = productDetails
+
+  const product = {};
   return (
     <div>
       <Container fluid="md" style={{ height: "80vh" }} className="pt-2">

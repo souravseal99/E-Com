@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container } from 'react-bootstrap'
 import ProductView from './Products'
 import getProducts from '../actions/productListAction'
-// import axios from 'axios'
-
 
 const Body = () => {
     const dispatch = useDispatch();
