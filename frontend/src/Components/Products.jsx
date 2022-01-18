@@ -1,4 +1,4 @@
-    import React from 'react'
+import React from 'react'
 import { Card, Container } from 'react-bootstrap'
 import Rating from './Rating'
 import { LinkContainer } from 'react-router-bootstrap'

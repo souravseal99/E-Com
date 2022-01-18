@@ -21,13 +21,13 @@ const Body = () => {
         <div style={{
             minHeight: "80vh"
         }}>
+
+            {/* fix: warning regarding conditional rendering ... */}
             {
                 loading ? (
                     <h1> Loading...</h1 >
-                ) : (
-                    error ? (
-                        <h1>{error}</h1>
-                    ) : (
+                ) : error ? <h1>{error}</h1>
+                    : (
                         <Container>
                             <div className="body__cards">
                                 {
@@ -38,7 +38,6 @@ const Body = () => {
                             </div>
                         </Container>
                     )
-                )
             }
 
         </div >

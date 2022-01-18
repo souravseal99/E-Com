@@ -4,7 +4,6 @@ const App = () => {
   return (
     <>
       <Homepage />
-      {/* <h1>hello</h1> */}
     </>
   );
 }
