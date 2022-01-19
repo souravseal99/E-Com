@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Container } from 'react-bootstrap'
 import ProductView from './Products'
 import getProducts from '../actions/productListAction'
+import { LinkContainer } from 'react-router-bootstrap';
 
 const Body = () => {
     const dispatch = useDispatch();
@@ -16,16 +17,14 @@ const Body = () => {
     const { loading, products, error } = productList
 
     return (
-        <div style={{
-            minHeight: "80vh"
-        }}>
-
-            {/* fix: warning regarding conditional rendering ... */}
-            {
-                loading ? (
-                    <h1> Loading...</h1 >
-                ) : error ? <h1>{error}</h1>
-                    : (
+        <div style={{ minHeight: "80vh" }}>
+            {(function () {
+                if (loading) {
+                    return <h1> Loading...</h1 >
+                } else if (error) {
+                    return <h1>{error}</h1>
+                } else {
+                    return (
                         <Container>
                             <div className="body__cards">
                                 {
@@ -36,8 +35,9 @@ const Body = () => {
                             </div>
                         </Container>
                     )
-            }
+                }
 
+            })()}
         </div >
     )
 }

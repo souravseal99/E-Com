@@ -5,31 +5,29 @@ import Rating from '../Components/Rating'
 import { Link } from 'react-router-dom'
 import { productDetailsActions } from "../actions/productDetailsActions";
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
-
-const ProductDetail = ({ match }) => {
-
+const ProductDetail = () => {
+  const params = useParams();
   // const dispatch = useDispatch()
-
   // useEffect(() => {
   //   dispatch(productDetailsActions(match.params.id));
   // }, [dispatch])
 
+  // const productDetails = useSelector(state => state.productDetails)
+  // const { loading, productDetail, error } = productDetails
+  // const product = productDetail;
+
   const [product, setProduct] = useState({})
   useEffect(() => {
     const getProduct = async () => {
-      const { data } = await axios.get(`/api/products/${match.params.id}`)
+      const { data } = await axios.get(`/api/products/${params.id}`)
       setProduct(data)
     }
     getProduct()
-  }, [match.params.id])
+  }, [params.id])
 
-  // const productDetails = useSelector(state => state.productDetails)
-
-  // const { loading, productDetail, error } = productDetails
-
-  // const product = productDetail;
-  const loading = false;
+  let loading = false;
   return (
     <div>
       {
@@ -62,7 +60,7 @@ const ProductDetail = ({ match }) => {
                 <Row className="mt-5">
 
                   <Col>
-                    <Button variant="outline-danger" size="lg" block disabled={product.count === 0} >
+                    <Button variant="outline-danger" size="lg" block="true" disabled={product.count === 0} >
                       <strong>Add to Cart</strong>
                     </Button>
                   </Col>

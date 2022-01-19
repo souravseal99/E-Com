@@ -15,7 +15,7 @@ const Homepage = () => {
                 <div className="app__body">
                     <Routes> {/*have to specify routes in New version */}
                         <Route path="/" element={<Body />} exact />
-                        <Route path="/product/:id" component={ProductDetail} />
+                        <Route path="/product/:id" element={<ProductDetail />} />
                     </Routes>
                 </div>
                 <div className="app__footer">
