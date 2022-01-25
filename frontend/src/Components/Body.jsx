@@ -2,14 +2,13 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Container } from 'react-bootstrap'
 import ProductView from './Products'
-import getProducts from '../actions/productListAction'
-import { LinkContainer } from 'react-router-bootstrap';
+import { productListAction } from '../actions/productActions'
 
 const Body = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getProducts())
+        dispatch(productListAction())
     }, [dispatch])
 
     const productList = useSelector(state => state.productList)
@@ -19,6 +18,7 @@ const Body = () => {
     return (
         <div style={{ minHeight: "80vh" }}>
             {(function () {
+
                 if (loading) {
                     return <h1> Loading...</h1 >
                 } else if (error) {
