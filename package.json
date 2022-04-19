@@ -30,7 +30,7 @@
     "express-async-handler": "^1.2.0",
     "mongoose": "^6.1.6",
     "nodemon": "^2.0.15",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
     "colours": "^0.6.0-2"
