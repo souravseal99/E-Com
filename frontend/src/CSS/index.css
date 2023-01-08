@@ -34,14 +34,13 @@ body {
 
 .card__image {
     object-fit: contain;
-    /* border: 2px solid red; */
     height: 15em;
-    /* width: 100%; */
     padding: 1.3em;
 }
 
 .pdtDetail_img {
-    object-fit: contain;
     width: 1em;
-    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

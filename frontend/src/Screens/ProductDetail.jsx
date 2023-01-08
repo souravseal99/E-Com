@@ -19,7 +19,7 @@ const ProductDetail = () => {
 
     return (
         <div>
-            {(function() {
+            {(function () {
                 if (loading) return <h1>loading...</h1>;
                 else if (error) return <h1>{error}</h1>;
                 else
@@ -41,7 +41,10 @@ const ProductDetail = () => {
                                     <Image
                                         style={{
                                             objectFit: "contain",
-                                            height: "21em",
+                                            height: "20em",
+                                            width: "34em",
+                                            margin: "0px auto",
+                                            padding: "0px",
                                         }}
                                         src={product.image}
                                         alt={product.name}
